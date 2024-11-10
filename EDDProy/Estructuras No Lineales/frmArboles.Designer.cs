@@ -47,7 +47,7 @@ namespace EDDemo.Estructuras_No_Lineales
             this.label2 = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
-            this.btnPodar = new System.Windows.Forms.Button();
+            this.btnPredecesor = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -230,22 +230,22 @@ namespace EDDemo.Estructuras_No_Lineales
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
-            // btnPodar
+            // btnPredecesor
             // 
-            this.btnPodar.Location = new System.Drawing.Point(141, 132);
-            this.btnPodar.Name = "btnPodar";
-            this.btnPodar.Size = new System.Drawing.Size(59, 37);
-            this.btnPodar.TabIndex = 17;
-            this.btnPodar.Text = "Podar arbol";
-            this.btnPodar.UseVisualStyleBackColor = true;
-            this.btnPodar.Click += new System.EventHandler(this.btnPodar_Click);
+            this.btnPredecesor.Location = new System.Drawing.Point(408, 13);
+            this.btnPredecesor.Name = "btnPredecesor";
+            this.btnPredecesor.Size = new System.Drawing.Size(72, 34);
+            this.btnPredecesor.TabIndex = 17;
+            this.btnPredecesor.Text = "Eliminar predecesor";
+            this.btnPredecesor.UseVisualStyleBackColor = true;
+            this.btnPredecesor.Click += new System.EventHandler(this.btnPredecesor_Click);
             // 
             // frmArboles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 388);
-            this.Controls.Add(this.btnPodar);
+            this.Controls.Add(this.btnPredecesor);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.label2);
@@ -293,6 +293,6 @@ namespace EDDemo.Estructuras_No_Lineales
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnBuscar;
-        private System.Windows.Forms.Button btnPodar;
+        private System.Windows.Forms.Button btnPredecesor;
     }
 }

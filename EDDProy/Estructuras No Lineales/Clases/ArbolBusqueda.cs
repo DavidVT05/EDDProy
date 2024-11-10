@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,7 +20,6 @@ namespace EDDemo.Estructuras_No_Lineales
             strArbol = "";
             strRecorrido = "";
         }
-
         public Boolean EstaVacio()
         {
             if (Raiz == null)
@@ -116,18 +116,85 @@ namespace EDDemo.Estructuras_No_Lineales
                 return BuscarNodo(dato, nodo.Izq);
             else
                 return BuscarNodo(dato, nodo.Der);
-        } 
-        public void podarArbol( ref NodoBinario nodo)
+        }
+        public NodoBinario BuscarMenor(NodoBinario nodo)
+        {
+            if (nodo == null)
+                return null;
+            else if (nodo.Izq == null)
+                return nodo;
+            else
+                return BuscarMenor(nodo.Izq);
+        }
+        public NodoBinario BuscarMayor(NodoBinario nodo)
+        {
+            if (nodo == null)
+            {
+                return null;
+            }
+            else if (nodo.Der == null)
+                return nodo;
+            else
+                return BuscarMayor(nodo.Der);
+        }
+        public void EliminarPredecesor(int Dato, NodoBinario nodo)
         {
             if (nodo == null)
                 return;
-            //Se elimina el nodo izquierdo
-            podarArbol(ref nodo.Izq);
-            //Se elimina nodo derecho
-            podarArbol(ref nodo.Der);
-            //Se elimina el nodo actual
-            nodo = null;
-            return;
+            else if (Dato < nodo.Dato)
+            {
+                EliminarPredecesor(Dato, nodo.Izq);
+            }
+            else if(Dato > nodo.Dato)
+            {
+                EliminarPredecesor(Dato, nodo.Der);
+            }
+            else if(nodo.Izq != null && nodo.Der != null)
+            {
+                //  tiene dos hijos
+                NodoBinario nodoMayor= BuscarMayor(nodo.Izq);
+                nodo.Dato = nodoMayor.Dato;
+                EliminarPredecesor(nodoMayor.Dato, nodo.Izq);
+            }
+            else
+            {
+                //Tiene un solo hijo o ninguno 
+                NodoBinario nodoTemporal = nodo;
+                if (nodo.Izq == null)
+                    nodo = nodo.Der;
+                else if (nodo.Der == null)
+                    nodo = nodo.Izq;
+                //eliminar el nodo
+                nodoTemporal = null;
+            }
+        } 
+        public void EliminarSucesor(int dato, NodoBinario nodo)
+        {
+            if (nodo == null)
+                return;
+            else if (dato < nodo.Dato)
+                EliminarSucesor(dato, nodo.Izq);
+            else if (dato > nodo.Dato)
+                EliminarSucesor(dato, nodo.Der);
+            else if(nodo.Izq  != null && nodo.Der != null)
+            {
+                //tiene dos hijos
+                NodoBinario nodoMenor = BuscarMenor(nodo.Der);
+                nodo.Dato = nodoMenor.Dato;
+                EliminarPredecesor(nodoMenor.Dato, nodo.Der);
+            }
+            else
+            {
+                //Tiene un solo hijo o ninguno 
+                NodoBinario nodoTemporal = nodo;
+                if (nodo.Izq == null)
+                    nodo = nodo.Der;
+                else if (nodo.Der == null)
+                    nodo = nodo.Izq;
+                //eliminar el nodo hoja 
+                nodoTemporal = null;
+            }
+
         }
     }
 }

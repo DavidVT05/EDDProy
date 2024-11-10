@@ -48,12 +48,11 @@ namespace EDDemo.Estructuras_No_Lineales
         {
             miArbol = null;
             miRaiz = null;
-            miArbol = new ArbolBusqueda();
-            txtArbol.Text  = "";
-            txtDato.Text = "";
-            lblRecorridoPreOrden.Text = "";
-            lblRecorridoInOrden.Text = "";
-            lblRecorridoPostOrden.Text = "";
+            txtArbol.Text  = null;
+            txtDato.Text = null;
+            lblRecorridoPreOrden.Text = null;
+            lblRecorridoInOrden.Text = null;
+            lblRecorridoPostOrden.Text = null;
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)
@@ -182,14 +181,9 @@ namespace EDDemo.Estructuras_No_Lineales
             }
             txtDato.Text = " ";
         }
-
-        private void btnPodar_Click(object sender, EventArgs e)
+        private void btnPredecesor_Click(object sender, EventArgs e)
         {
-
-            miArbol.podarArbol(ref miRaiz);
-            MessageBox.Show("El arbol se a eliminado");
-            miArbol.MuestraArbolAcostado(1,miRaiz);
-            txtArbol.Text = null;
+            
         }
     }
 }
