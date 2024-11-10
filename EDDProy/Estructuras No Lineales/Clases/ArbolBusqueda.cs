@@ -104,18 +104,30 @@ namespace EDDemo.Estructuras_No_Lineales
             strRecorrido = strRecorrido + nodo.Dato + ", ";
             return;
         }
-        public NodoBinario BuscarNodo(int dato, NodoBinario nodo)
+        public Boolean BuscarNodo(int dato, NodoBinario nodo)
         {
             if (nodo == null)
-                return null;
+                return false;
 
             if (nodo.Dato == dato)
-                return nodo;
+                return true;
 
             if (dato < nodo.Dato)
                 return BuscarNodo(dato, nodo.Izq);
             else
                 return BuscarNodo(dato, nodo.Der);
+        } 
+        public void podarArbol( ref NodoBinario nodo)
+        {
+            if (nodo == null)
+                return;
+            //Se elimina el nodo izquierdo
+            podarArbol(ref nodo.Izq);
+            //Se elimina nodo derecho
+            podarArbol(ref nodo.Der);
+            //Se elimina el nodo actual
+            nodo = null;
+            return;
         }
     }
 }

@@ -167,7 +167,7 @@ namespace EDDemo.Estructuras_No_Lineales
             if (int.TryParse(txtBusqueda.Text, out int datoBuscado))
             {
                 var nodoEncontrado = miArbol.BuscarNodo(datoBuscado, miArbol.RegresaRaiz());
-                if (nodoEncontrado != null)
+                if (nodoEncontrado != true)
                 {
                     MessageBox.Show("El nodo si se encuentra en el arbol");
                 }
@@ -181,6 +181,15 @@ namespace EDDemo.Estructuras_No_Lineales
                 MessageBox.Show("Ingrese un valor valido.");
             }
             txtDato.Text = " ";
+        }
+
+        private void btnPodar_Click(object sender, EventArgs e)
+        {
+
+            miArbol.podarArbol(ref miRaiz);
+            MessageBox.Show("El arbol se a eliminado");
+            miArbol.MuestraArbolAcostado(1,miRaiz);
+            txtArbol.Text = null;
         }
     }
 }

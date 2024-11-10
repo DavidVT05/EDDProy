@@ -47,6 +47,7 @@ namespace EDDemo.Estructuras_No_Lineales
             this.label2 = new System.Windows.Forms.Label();
             this.txtBusqueda = new System.Windows.Forms.TextBox();
             this.btnBuscar = new System.Windows.Forms.Button();
+            this.btnPodar = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.txtNodos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -206,7 +207,7 @@ namespace EDDemo.Estructuras_No_Lineales
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(257, 39);
+            this.label2.Location = new System.Drawing.Point(206, 21);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(80, 13);
             this.label2.TabIndex = 14;
@@ -214,14 +215,14 @@ namespace EDDemo.Estructuras_No_Lineales
             // 
             // txtBusqueda
             // 
-            this.txtBusqueda.Location = new System.Drawing.Point(334, 32);
+            this.txtBusqueda.Location = new System.Drawing.Point(282, 18);
             this.txtBusqueda.Name = "txtBusqueda";
             this.txtBusqueda.Size = new System.Drawing.Size(48, 20);
             this.txtBusqueda.TabIndex = 15;
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(397, 31);
+            this.btnBuscar.Location = new System.Drawing.Point(336, 14);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(51, 27);
             this.btnBuscar.TabIndex = 16;
@@ -229,11 +230,22 @@ namespace EDDemo.Estructuras_No_Lineales
             this.btnBuscar.UseVisualStyleBackColor = true;
             this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
+            // btnPodar
+            // 
+            this.btnPodar.Location = new System.Drawing.Point(141, 132);
+            this.btnPodar.Name = "btnPodar";
+            this.btnPodar.Size = new System.Drawing.Size(59, 37);
+            this.btnPodar.TabIndex = 17;
+            this.btnPodar.Text = "Podar arbol";
+            this.btnPodar.UseVisualStyleBackColor = true;
+            this.btnPodar.Click += new System.EventHandler(this.btnPodar_Click);
+            // 
             // frmArboles
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(867, 388);
+            this.Controls.Add(this.btnPodar);
             this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.txtBusqueda);
             this.Controls.Add(this.label2);
@@ -281,5 +293,6 @@ namespace EDDemo.Estructuras_No_Lineales
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtBusqueda;
         private System.Windows.Forms.Button btnBuscar;
+        private System.Windows.Forms.Button btnPodar;
     }
 }
