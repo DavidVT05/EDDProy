@@ -183,7 +183,70 @@ namespace EDDemo.Estructuras_No_Lineales
         }
         private void btnPredecesor_Click(object sender, EventArgs e)
         {
-            
+            if(int.TryParse(txtDato.Text, out int dato))
+            {
+                miArbol.EliminarPredecesor(dato, miRaiz);
+                MessageBox.Show($"El predecesor del nodo con el dato{dato} eliminado si existia.");
+            }
+            else
+            {
+                MessageBox.Show("Ingresar un numero valido.");
+            }
+            miArbol.MuestraArbolAcostado(1, miRaiz);
+            txtArbol.Text = miArbol.strArbol;
+        }
+
+        private void btnNiveles_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            miArbol.strRecorrido = " ";
+            if(miRaiz == null)
+            {
+                lblNiveles.Text = "El arbol se encuentra vacio.";
+                return;
+            }
+            miArbol.RecorrerPorNiveles(miRaiz);
+            lblNiveles.Text = miArbol.strRecorrido;
+        }
+
+        private void btnSucesor_Click(object sender, EventArgs e)
+        {
+            if (int.TryParse(txtDato.Text, out int dato))
+            {
+                miArbol.EliminarSucesor(dato, miRaiz);
+                MessageBox.Show($"El sucesor del nodo con el dato{dato} eliminado si existia.");
+            }
+            else
+            {
+                MessageBox.Show("Ingresar un numero valido.");
+            }
+            miArbol.MuestraArbolAcostado(1, miRaiz);
+            txtArbol.Text = miArbol.strArbol;
+        }
+
+        private void btnAltura_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            if(miRaiz == null)
+            {
+                lblAltura.Text = "El arbol se encuentra vacio.";
+                return;
+            }
+            int altura = miArbol.ArbolAltura(miRaiz);
+            lblAltura.Text = " " + altura;
+        }
+
+        private void btnHojas_Click(object sender, EventArgs e)
+        {
+            int totalHojas = miArbol.ContarHojas(miRaiz);
+            lblHojas.Text = " " + totalHojas;
+        }
+
+        private void btnCompleto_Click(object sender, EventArgs e)
+        {
+            miRaiz = miArbol.RegresaRaiz();
+            bool Completo = miArbol.EsCompleto(miRaiz);
+            lblCompleto.Text = Completo ? "El arbol se encuentra completo." : "El arbol no se encuentra completo." ;
         }
     }
 }

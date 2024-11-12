@@ -1,7 +1,9 @@
-﻿using System;
+﻿using EDDemo.Estructuras_No_Lineales.Clases;
+using System;
 using System.Collections.Generic;
 using System.Diagnostics.Eventing.Reader;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -194,7 +196,85 @@ namespace EDDemo.Estructuras_No_Lineales
                 //eliminar el nodo hoja 
                 nodoTemporal = null;
             }
+            
+        }
+        public void RecorrerPorNiveles(NodoBinario nodo)
+        {
+            if(nodo == null)
+            {
+                MessageBox.Show("El arbol se encuentra vacio.");
+                return;
+            }
+            Cola auxCola = new Cola();
+            auxCola.Push(nodo);
+            while (!auxCola.Vacia())
+            {
+                NodoBinario nodoActual = auxCola.Pop();
+                MessageBox.Show(nodoActual.Dato + " - ");
+                if(nodoActual.Izq != null)
+                {
+                    auxCola.Push(nodoActual.Izq);
+                }
+                if(nodoActual.Der != null)
+                {
+                    auxCola.Push(nodoActual.Der);
+                }
+            }
 
         }
+        public int ArbolAltura(NodoBinario nodo)
+        {
+            if (nodo == null)
+                return 0;
+            return (1 + Math.Max(ArbolAltura(nodo.Izq), ArbolAltura(nodo.Der)));
+        }
+        public int ContarHojas(NodoBinario nodo)
+        {
+            if (nodo == null)
+                return 0;
+            if (nodo.Der ==null && nodo.Izq == null)
+                return 1;
+            else
+                return ContarHojas(nodo.Izq) + ContarHojas(nodo.Der);
+        }
+        public int ContarNodo(NodoBinario nodo)
+        {
+            if (nodo == null)
+                return 0;
+            return 1 + ContarNodo(nodo.Izq) + ContarNodo(nodo.Der);
+        }
+        public bool EsCompleto(NodoBinario nodo)
+        {
+            if (nodo == null)
+                return true;
+            int totalNodos = ContarNodo(nodo);
+            return EsCompleto(nodo, 0, totalNodos);
+        }
+
+        public bool EsCompleto(NodoBinario nodo, int indice, int totalNodos)
+        {
+
+            if (nodo == null)
+                return true; // un arbol vacio es completo
+            if (indice >= totalNodos)
+                return false;
+            bool izqCompleto = EsCompleto(nodo.Izq, 2 * indice + 1, totalNodos);
+            bool derCompleto = EsCompleto(nodo.Der, 2 * indice + 2, totalNodos);
+            return izqCompleto && derCompleto;
+        }
+        public bool EsLleno(NodoBinario nodo)
+        {
+            if (nodo == null)
+                return true;  // un nodo vacio es lleno
+            // es una hoja
+            if (nodo.Der == null && nodo.Izq == null)
+                return true;
+            // si tiene ambos hijos, se revisa que sus subnodos sean llenos
+            if (nodo.Der != null && nodo.Izq != null)
+                return (EsLleno(nodo.Izq) && EsLleno(nodo.Der));
+            // en cualquier otro caso, no es lleno
+            return false;
+        }
+
     }
 }
