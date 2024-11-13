@@ -1,11 +1,6 @@
-﻿using EDDemo.Estructuras_No_Lineales.Clases;
-using System;
+﻿using System;
 using System.Collections.Generic;
-using System.Diagnostics.Eventing.Reader;
-using System.Linq;
-using System.Security.Cryptography.X509Certificates;
 using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace EDDemo.Estructuras_No_Lineales
@@ -77,34 +72,34 @@ namespace EDDemo.Estructuras_No_Lineales
             }
             return b.ToString();
         }
-        public void PreOrden(NodoBinario nodo)
+        public String PreOrden(NodoBinario nodo)
         {
             if (nodo == null)
-                return;
+                return " ";
             strRecorrido = strRecorrido + nodo.Dato + ", ";
             PreOrden(nodo.Izq);
             PreOrden(nodo.Der);
-            return;
+            return " ";
         }
-        public void InOrden(NodoBinario nodo)
+        public String InOrden(NodoBinario nodo)
         {
             if (nodo == null)
-                return;
+                return " ";
 
             InOrden(nodo.Izq);
             strRecorrido = strRecorrido + nodo.Dato + ", ";
             InOrden(nodo.Der);
-            return;
+            return " ";
         }
-        public void PostOrden(NodoBinario nodo)
+        public String PostOrden(NodoBinario nodo)
         {
             if (nodo == null)
-                return;
+                return " ";
 
             PostOrden(nodo.Izq);
             PostOrden(nodo.Der);
             strRecorrido = strRecorrido + nodo.Dato + ", ";
-            return;
+            return " ";
         }
         public Boolean BuscarNodo(int dato, NodoBinario nodo)
         {
@@ -139,24 +134,24 @@ namespace EDDemo.Estructuras_No_Lineales
             else
                 return BuscarMayor(nodo.Der);
         }
-        public void EliminarPredecesor(int Dato, NodoBinario nodo)
+        public void EliminarPredecesor(int Dato, ref NodoBinario nodo)
         {
             if (nodo == null)
                 return;
             else if (Dato < nodo.Dato)
             {
-                EliminarPredecesor(Dato, nodo.Izq);
+                EliminarPredecesor(Dato,ref nodo.Izq);
             }
             else if(Dato > nodo.Dato)
             {
-                EliminarPredecesor(Dato, nodo.Der);
+                EliminarPredecesor(Dato,ref nodo.Der);
             }
             else if(nodo.Izq != null && nodo.Der != null)
             {
                 //  tiene dos hijos
                 NodoBinario nodoMayor= BuscarMayor(nodo.Izq);
                 nodo.Dato = nodoMayor.Dato;
-                EliminarPredecesor(nodoMayor.Dato, nodo.Izq);
+                EliminarPredecesor(nodoMayor.Dato, ref nodo.Izq);
             }
             else
             {
@@ -170,20 +165,20 @@ namespace EDDemo.Estructuras_No_Lineales
                 nodoTemporal = null;
             }
         } 
-        public void EliminarSucesor(int dato, NodoBinario nodo)
+        public void EliminarSucesor(int dato, ref  NodoBinario nodo)
         {
             if (nodo == null)
                 return;
             else if (dato < nodo.Dato)
-                EliminarSucesor(dato, nodo.Izq);
+                EliminarSucesor(dato, ref  nodo.Izq);
             else if (dato > nodo.Dato)
-                EliminarSucesor(dato, nodo.Der);
+                EliminarSucesor(dato, ref nodo.Der);
             else if(nodo.Izq  != null && nodo.Der != null)
             {
                 //tiene dos hijos
                 NodoBinario nodoMenor = BuscarMenor(nodo.Der);
                 nodo.Dato = nodoMenor.Dato;
-                EliminarPredecesor(nodoMenor.Dato, nodo.Der);
+                EliminarPredecesor(nodoMenor.Dato, ref nodo.Der);
             }
             else
             {
@@ -198,29 +193,31 @@ namespace EDDemo.Estructuras_No_Lineales
             }
             
         }
-        public void RecorrerPorNiveles(NodoBinario nodo)
+        public String RecorrerPorNiveles(NodoBinario nodo)
         {
+            strRecorrido = " ";
             if(nodo == null)
             {
                 MessageBox.Show("El arbol se encuentra vacio.");
-                return;
+                return " ";
             }
-            Cola auxCola = new Cola();
-            auxCola.Push(nodo);
-            while (!auxCola.Vacia())
+            List<NodoBinario> AuxCola = new List<NodoBinario>();
+            AuxCola.Add(Raiz);
+            while (AuxCola.Count > 0)
             {
-                NodoBinario nodoActual = auxCola.Pop();
-                MessageBox.Show(nodoActual.Dato + " - ");
+                NodoBinario nodoActual = AuxCola[0];
+                AuxCola.RemoveAt(0);
+                strRecorrido += nodoActual.Dato + " ";
                 if(nodoActual.Izq != null)
                 {
-                    auxCola.Push(nodoActual.Izq);
+                    AuxCola.Add(nodoActual.Izq);
                 }
                 if(nodoActual.Der != null)
                 {
-                    auxCola.Push(nodoActual.Der);
+                    AuxCola.Add(nodoActual.Der);
                 }
             }
-
+             return strRecorrido;
         }
         public int ArbolAltura(NodoBinario nodo)
         {
@@ -247,20 +244,37 @@ namespace EDDemo.Estructuras_No_Lineales
         {
             if (nodo == null)
                 return true;
-            int totalNodos = ContarNodo(nodo);
-            return EsCompleto(nodo, 0, totalNodos);
-        }
+            List<NodoBinario> AuxCola = new List<NodoBinario>();
+            AuxCola.Add(nodo);
+            int index = 0;
 
-        public bool EsCompleto(NodoBinario nodo, int indice, int totalNodos)
-        {
-
-            if (nodo == null)
-                return true; // un arbol vacio es completo
-            if (indice >= totalNodos)
-                return false;
-            bool izqCompleto = EsCompleto(nodo.Izq, 2 * indice + 1, totalNodos);
-            bool derCompleto = EsCompleto(nodo.Der, 2 * indice + 2, totalNodos);
-            return izqCompleto && derCompleto;
+            bool NoLLeno = false;
+            while(index < AuxCola.Count)
+            {
+                NodoBinario nodoActual = AuxCola[index];
+                index++;
+                if(nodoActual.Izq != null)
+                {
+                    if (NoLLeno)
+                        return false;
+                    AuxCola.Add(nodoActual.Izq);
+                }
+                else
+                {
+                    NoLLeno = true;
+                }
+                if(nodoActual.Der != null)
+                {
+                    if (NoLLeno)
+                        return false;
+                    AuxCola.Add(nodoActual.Der);
+                }
+                else
+                {
+                    NoLLeno = true;
+                }
+            }
+            return true;
         }
         public bool EsLleno(NodoBinario nodo)
         {

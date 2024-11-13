@@ -53,6 +53,10 @@ namespace EDDemo.Estructuras_No_Lineales
             lblRecorridoPreOrden.Text = null;
             lblRecorridoInOrden.Text = null;
             lblRecorridoPostOrden.Text = null;
+            lblAltura.Text = null;
+            lblCompleto.Text = null;
+            lblHojas.Text = null;
+            lblNiveles.Text = null;
         }
 
         private void btnGraficar_Click(object sender, EventArgs e)
@@ -168,11 +172,11 @@ namespace EDDemo.Estructuras_No_Lineales
                 var nodoEncontrado = miArbol.BuscarNodo(datoBuscado, miArbol.RegresaRaiz());
                 if (nodoEncontrado != true)
                 {
-                    MessageBox.Show("El nodo si se encuentra en el arbol");
+                    MessageBox.Show("El nodo ingresado no se encuentra en el arbol.");
                 }
                 else
                 {
-                    MessageBox.Show("El nodo ingresado no se encuentra en el arbol.");
+                    MessageBox.Show("El nodo si se encuentra en el arbol");
                 }
             }
             else
@@ -183,17 +187,27 @@ namespace EDDemo.Estructuras_No_Lineales
         }
         private void btnPredecesor_Click(object sender, EventArgs e)
         {
+            txtArbol.Text = " ";
             if(int.TryParse(txtDato.Text, out int dato))
             {
-                miArbol.EliminarPredecesor(dato, miRaiz);
+                miArbol.EliminarPredecesor(dato, ref miRaiz);
                 MessageBox.Show($"El predecesor del nodo con el dato{dato} eliminado si existia.");
+                miArbol.MuestraArbolAcostado(1, miRaiz);
+                txtArbol.Text = miArbol.strArbol;
+                lblAltura.Text = $"{miArbol.ArbolAltura(miRaiz)}";
+                lblCompleto.Text = miArbol.EsCompleto(miRaiz) ?"El arbol es completo." : "El arbol no esta completo";
+                lblHojas.Text = $"{miArbol.ContarHojas(miRaiz)}";
+                lblRecorridoPreOrden.Text = miArbol.PreOrden(miRaiz);
+                lblNiveles.Text = miArbol.RecorrerPorNiveles(miRaiz);
+                lblRecorridoPostOrden.Text = miArbol.PostOrden(miRaiz);
+                lblRecorridoInOrden.Text = miArbol.InOrden(miRaiz);
             }
             else
             {
                 MessageBox.Show("Ingresar un numero valido.");
             }
-            miArbol.MuestraArbolAcostado(1, miRaiz);
-            txtArbol.Text = miArbol.strArbol;
+           
+            
         }
 
         private void btnNiveles_Click(object sender, EventArgs e)
@@ -207,14 +221,24 @@ namespace EDDemo.Estructuras_No_Lineales
             }
             miArbol.RecorrerPorNiveles(miRaiz);
             lblNiveles.Text = miArbol.strRecorrido;
+
         }
 
         private void btnSucesor_Click(object sender, EventArgs e)
         {
             if (int.TryParse(txtDato.Text, out int dato))
             {
-                miArbol.EliminarSucesor(dato, miRaiz);
+                miArbol.EliminarSucesor(dato, ref miRaiz);
                 MessageBox.Show($"El sucesor del nodo con el dato{dato} eliminado si existia.");
+                miArbol.MuestraArbolAcostado(1, miRaiz);
+                txtArbol.Text = miArbol.strArbol;
+                lblAltura.Text = $"{miArbol.ArbolAltura(miRaiz)}";
+                lblCompleto.Text = miArbol.EsCompleto(miRaiz) ? "El arbol es completo." : "El arbol no esta completo";
+                lblHojas.Text = $"{miArbol.ContarHojas(miRaiz)}";
+                lblRecorridoPreOrden.Text = miArbol.PreOrden(miRaiz);
+                lblNiveles.Text = miArbol.RecorrerPorNiveles(miRaiz);
+                lblRecorridoPostOrden.Text = miArbol.PostOrden(miRaiz);
+                lblRecorridoInOrden.Text = miArbol.InOrden(miRaiz);
             }
             else
             {
