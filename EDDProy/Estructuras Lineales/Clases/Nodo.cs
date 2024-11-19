@@ -10,5 +10,7 @@ namespace EDDemo
     {
         public String Dato;
         public Nodo sig;
+        public int Valor { get; set; }
+        public object Nombre { get; internal set; }
     }
 }
