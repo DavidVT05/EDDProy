@@ -16,11 +16,8 @@ namespace EDDemo
         }
         public void Push(int valor) //metodo para agregar un nodo a la pila
         {
-            if(tope != null)
-            {
-                Eliminar(tope); // Eliminamos el nodo anterior, si existe
-            }
-            tope = new  Nodo { Valor = valor, sig = tope}; // creamos un nuevo nodo y lo asignamos como tope
+            Nodo nuevoNodo = new Nodo { Valor = valor, sig = tope }; // creamos un nuevo nodo y lo asignamos a tope
+            tope = nuevoNodo; 
         }
         public int Pop()
         {
@@ -62,7 +59,7 @@ namespace EDDemo
             {
                 if (actual.Valor == valor)
                     return true;  // el nodo se encontro
-                actual = actual.sig;
+                actual = actual.sig; // mover al siguiente nodo
             }
             return false; // no se encontro el nodo 
         }

@@ -31,7 +31,7 @@ namespace EDDemo
         {
             this.Valor = new System.Windows.Forms.TextBox();
             this.btnPush = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.btnPop = new System.Windows.Forms.Button();
             this.btnMostrar = new System.Windows.Forms.Button();
             this.listPila = new System.Windows.Forms.ListBox();
             this.btnVaciar = new System.Windows.Forms.Button();
@@ -59,16 +59,16 @@ namespace EDDemo
             this.btnPush.UseVisualStyleBackColor = true;
             this.btnPush.Click += new System.EventHandler(this.btnPush_Click);
             // 
-            // button1
+            // btnPop
             // 
-            this.button1.Location = new System.Drawing.Point(327, 73);
-            this.button1.Margin = new System.Windows.Forms.Padding(2);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(51, 21);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "Pop";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.btnPop.Location = new System.Drawing.Point(327, 73);
+            this.btnPop.Margin = new System.Windows.Forms.Padding(2);
+            this.btnPop.Name = "btnPop";
+            this.btnPop.Size = new System.Drawing.Size(51, 21);
+            this.btnPop.TabIndex = 2;
+            this.btnPop.Text = "Pop";
+            this.btnPop.UseVisualStyleBackColor = true;
+            this.btnPop.Click += new System.EventHandler(this.btnPop_Click);
             // 
             // btnMostrar
             // 
@@ -127,7 +127,7 @@ namespace EDDemo
             this.Controls.Add(this.btnVaciar);
             this.Controls.Add(this.listPila);
             this.Controls.Add(this.btnMostrar);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnPop);
             this.Controls.Add(this.btnPush);
             this.Controls.Add(this.Valor);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -142,7 +142,7 @@ namespace EDDemo
 
         private System.Windows.Forms.TextBox Valor;
         private System.Windows.Forms.Button btnPush;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button btnPop;
         private System.Windows.Forms.Button btnMostrar;
         private System.Windows.Forms.ListBox listPila;
         private System.Windows.Forms.Button btnVaciar;
