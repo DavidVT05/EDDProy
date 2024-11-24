@@ -16,13 +16,11 @@ namespace EDDemo
         }
         public void Push(int valor) //metodo para agregar un nodo a la pila
         {
-            Nodo Nuevo = new Nodo();
-            Nuevo.sig = null;
             if(tope != null)
             {
                 Eliminar(tope); // Eliminamos el nodo anterior, si existe
             }
-            tope =new  Nodo { Valor = valor}; // creamos un nuevo nodo y lo asignamos como tope
+            tope = new  Nodo { Valor = valor, sig = tope}; // creamos un nuevo nodo y lo asignamos como tope
         }
         public int Pop()
         {
@@ -31,24 +29,42 @@ namespace EDDemo
                 throw new ApplicationException("La pila esta vacia");
             }
             int valor = tope.Valor;
-            tope = tope.sig; // rlimina el valor para liberar memoria
+            tope = tope.sig; // elimina el valor para liberar memoria
             return valor;
         }
         public int Tope()
         {
             if(tope == null)
             {
-                throw new ApplicationException("La pilka esta vacia.");
+                throw new ApplicationException("La pila esta vacia.");
             }
             return tope.Valor;
         }
-        public bool Vacia()
-        {
-            return tope == null; // se regresa nulo si la pila esta vacia
-        }
-        public void Eliminar(Nodo nodo)
+        public bool Vacia(Nodo nodo)
         {
             nodo = null;
+            return tope == null; // se regresa nulo si la pila esta vacia
+        }
+        public void Mostrar(ListBox listBox)
+        {
+            listBox.Items.Clear(); // limpiar el listbox antes de mostrar
+            Nodo actual = tope;
+            while(actual != null)
+            {
+                listBox.Items.Add(actual.Valor); // se agrega el valor a la listbox
+                actual = actual.sig;
+            }
+        }
+        public bool Buscar(int valor)
+        {
+            Nodo actual = tope;
+            while (actual != null)
+            {
+                if (actual.Valor == valor)
+                    return true;  // el nodo se encontro
+                actual = actual.sig;
+            }
+            return false; // no se encontro el nodo 
         }
     }
 }
