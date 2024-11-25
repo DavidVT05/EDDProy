@@ -95,25 +95,26 @@ namespace EDDemo
             // simplesToolStripMenuItem
             // 
             this.simplesToolStripMenuItem.Name = "simplesToolStripMenuItem";
-            this.simplesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.simplesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.simplesToolStripMenuItem.Text = "Simples";
+            this.simplesToolStripMenuItem.Click += new System.EventHandler(this.simplesToolStripMenuItem_Click);
             // 
             // doblesToolStripMenuItem
             // 
             this.doblesToolStripMenuItem.Name = "doblesToolStripMenuItem";
-            this.doblesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.doblesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.doblesToolStripMenuItem.Text = "Dobles";
             // 
             // circularesSimplesToolStripMenuItem
             // 
             this.circularesSimplesToolStripMenuItem.Name = "circularesSimplesToolStripMenuItem";
-            this.circularesSimplesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.circularesSimplesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.circularesSimplesToolStripMenuItem.Text = "Circulares simples";
             // 
             // circularesDoblesToolStripMenuItem
             // 
             this.circularesDoblesToolStripMenuItem.Name = "circularesDoblesToolStripMenuItem";
-            this.circularesDoblesToolStripMenuItem.Size = new System.Drawing.Size(169, 22);
+            this.circularesDoblesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.circularesDoblesToolStripMenuItem.Text = "Circulares dobles";
             // 
             // estructurasNoLibealesToolStripMenuItem

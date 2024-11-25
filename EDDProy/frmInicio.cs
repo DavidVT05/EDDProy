@@ -54,5 +54,12 @@ namespace EDDemo
             mColas.MdiParent = this;
             mColas.Show();
         }
+
+        private void simplesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListas frmListas = new frmListas();
+            frmListas.MdiParent = this;
+            frmListas.Show();
+        }
     }
 }

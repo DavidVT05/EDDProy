@@ -13,5 +13,14 @@ namespace EDDemo
         public int Valor { get; set; }
         public object Nombre { get; internal set; }
     }
-
+    public class NodoSimple
+    {
+        public int Dato;
+        public NodoSimple sig;
+        public NodoSimple(int dato)
+        {
+            Dato = dato;
+            sig = null;
+        }
+    }
 }
