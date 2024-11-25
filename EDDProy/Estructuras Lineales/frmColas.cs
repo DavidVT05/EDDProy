@@ -14,29 +14,51 @@ namespace EDDemo.Estructuras_Lineales
 
         private void btbAgregar_Click(object sender, EventArgs e)
         {
-            if (Valor.Text.Length == 0)
+            if(int.TryParse(Valor.Text, out int valor))
             {
-                MessageBox.Show("Se debe ingresar un valor valido.");
+                if(Valor.Text != " ")
+                {
+                    Nodo nuevoNodo = new Nodo();
+                    nuevoNodo.Dato = Valor.Text;
+                    cola.Agregar(nuevoNodo);
+                    MessageBox.Show("El valor se agrego a la cola.");
+                }
             }
             else
             {
-                Nodo nuevoNodo = new Nodo();
-                nuevoNodo.Dato = Valor.Text;
-                cola.Agregar(nuevoNodo);
-                lblCola.Text = " El nodo se agrego.";
-                
+                MessageBox.Show("Ingrese un valor valido.");
             }
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            if (cola.Vacia())
+            cola.Eliminar();
+            cola.Mostrar(listCola);
+        }
+
+        private void btnMostrar_Click(object sender, EventArgs e)
+        {
+            cola.Mostrar(listCola);
+        }
+
+        private void btnBuscar_Click(object sender, EventArgs e)
+        {
+            string valorBuscado = Valor.Text;
+            if(valorBuscado != " ")
             {
-                MessageBox.Show("La cola esta vacia.");
+                bool encontrado = cola.Buscar(valorBuscado);
+                if (encontrado)
+                {
+                    MessageBox.Show($"El valor '{valorBuscado}' si se encuentra en la cola.");
+                }
+                else
+                {
+                    MessageBox.Show($"El valor '{valorBuscado}' no se encontro en la cola.");
+                }
             }
             else
             {
-                cola.Eliminar();
+                MessageBox.Show("Ingrese un valor valido.");
             }
         }
     }

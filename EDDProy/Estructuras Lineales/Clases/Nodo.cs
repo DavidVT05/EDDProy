@@ -8,9 +8,10 @@ namespace EDDemo
 {
     public class Nodo
     {
-        public String Dato;
+        public string Dato;
         public Nodo sig {  get; set; }
         public int Valor { get; set; }
         public object Nombre { get; internal set; }
     }
+
 }
