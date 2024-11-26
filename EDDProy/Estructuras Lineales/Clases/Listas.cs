@@ -94,6 +94,33 @@ namespace EDDemo
             aux = null; // se elimina el nodo 
             return dato;
         }
-
+        public NodoSimple Buscar(int dato)
+        {
+            NodoSimple aux = Inicio;
+            while(aux != null) 
+            {
+                if(aux.Dato == dato)
+                {
+                    return aux; //se devuelve el nodo buscado  si el dato se encuentra
+                }
+                aux = aux.sig;
+            }
+            return null;
+        }
+        public void Mostrar(ListBox listBox)
+        {
+            listBox.Items.Clear();
+            NodoSimple aux = Inicio;
+            if(aux == null)
+            {
+                listBox.Items.Add("La lista se encuentra vacia");
+                return;
+            }
+            while(aux != null)
+            {
+                listBox.Items.Add(aux.Dato);
+                aux = aux.sig;
+            }
+        }
     }
 }
