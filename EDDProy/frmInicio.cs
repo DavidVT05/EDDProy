@@ -61,5 +61,12 @@ namespace EDDemo
             frmListas.MdiParent = this;
             frmListas.Show();
         }
+
+        private void doblesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmListasDobles frmDobles = new frmListasDobles();
+            frmDobles.MdiParent = this;
+            frmDobles.Show();
+        }
     }
 }
