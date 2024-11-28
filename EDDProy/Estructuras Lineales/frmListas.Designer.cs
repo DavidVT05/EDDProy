@@ -66,9 +66,9 @@
             // 
             // btnEliminar
             // 
-            this.btnEliminar.Location = new System.Drawing.Point(210, 127);
+            this.btnEliminar.Location = new System.Drawing.Point(359, 89);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(136, 22);
+            this.btnEliminar.Size = new System.Drawing.Size(129, 22);
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
@@ -76,18 +76,19 @@
             // 
             // btnBuscar
             // 
-            this.btnBuscar.Location = new System.Drawing.Point(210, 165);
+            this.btnBuscar.Location = new System.Drawing.Point(210, 127);
             this.btnBuscar.Name = "btnBuscar";
             this.btnBuscar.Size = new System.Drawing.Size(136, 22);
             this.btnBuscar.TabIndex = 5;
             this.btnBuscar.Text = "Buscar";
             this.btnBuscar.UseVisualStyleBackColor = true;
+            this.btnBuscar.Click += new System.EventHandler(this.btnBuscar_Click);
             // 
             // btnMostrar
             // 
-            this.btnMostrar.Location = new System.Drawing.Point(210, 203);
+            this.btnMostrar.Location = new System.Drawing.Point(359, 127);
             this.btnMostrar.Name = "btnMostrar";
-            this.btnMostrar.Size = new System.Drawing.Size(136, 24);
+            this.btnMostrar.Size = new System.Drawing.Size(128, 24);
             this.btnMostrar.TabIndex = 6;
             this.btnMostrar.Text = "Mostrar lista";
             this.btnMostrar.UseVisualStyleBackColor = true;
@@ -106,7 +107,7 @@
             // 
             this.txtPosicion.Location = new System.Drawing.Point(359, 49);
             this.txtPosicion.Name = "txtPosicion";
-            this.txtPosicion.Size = new System.Drawing.Size(107, 20);
+            this.txtPosicion.Size = new System.Drawing.Size(128, 20);
             this.txtPosicion.TabIndex = 8;
             // 
             // label2
@@ -122,7 +123,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(499, 450);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtPosicion);
             this.Controls.Add(this.label1);
