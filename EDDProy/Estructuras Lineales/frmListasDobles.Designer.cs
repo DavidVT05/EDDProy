@@ -31,7 +31,7 @@
             this.listDobles = new System.Windows.Forms.ListBox();
             this.txtValor = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtPosicion = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.btnAgregar = new System.Windows.Forms.Button();
             this.btnEliminar = new System.Windows.Forms.Button();
@@ -63,12 +63,12 @@
             this.label1.TabIndex = 2;
             this.label1.Text = "Ingrese un valor:";
             // 
-            // textBox1
+            // txtPosicion
             // 
-            this.textBox1.Location = new System.Drawing.Point(352, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(85, 20);
-            this.textBox1.TabIndex = 3;
+            this.txtPosicion.Location = new System.Drawing.Point(352, 48);
+            this.txtPosicion.Name = "txtPosicion";
+            this.txtPosicion.Size = new System.Drawing.Size(85, 20);
+            this.txtPosicion.TabIndex = 3;
             // 
             // label2
             // 
@@ -87,6 +87,7 @@
             this.btnAgregar.TabIndex = 5;
             this.btnAgregar.Text = "Agregar";
             this.btnAgregar.UseVisualStyleBackColor = true;
+            this.btnAgregar.Click += new System.EventHandler(this.btnAgregar_Click);
             // 
             // btnEliminar
             // 
@@ -96,6 +97,7 @@
             this.btnEliminar.TabIndex = 6;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnBuscar
             // 
@@ -115,6 +117,7 @@
             this.btmMostrar.TabIndex = 8;
             this.btmMostrar.Text = "Mostrar";
             this.btmMostrar.UseVisualStyleBackColor = true;
+            this.btmMostrar.Click += new System.EventHandler(this.btmMostrar_Click);
             // 
             // frmListasDobles
             // 
@@ -126,7 +129,7 @@
             this.Controls.Add(this.btnEliminar);
             this.Controls.Add(this.btnAgregar);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtPosicion);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.listDobles);
@@ -142,7 +145,7 @@
         private System.Windows.Forms.ListBox listDobles;
         private System.Windows.Forms.TextBox txtValor;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtPosicion;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button btnAgregar;
         private System.Windows.Forms.Button btnEliminar;

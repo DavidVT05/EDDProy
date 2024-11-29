@@ -25,14 +25,9 @@ namespace EDDemo
     }
     public class NodosActuales
     {
-        public string Valor;
+        public int Valor;
         public NodosActuales sig;
         public NodosActuales ant;
-        public NodosActuales(string valor)
-        {
-            Valor = valor;
-            sig = null;
-            ant = null;
-        }
+
     }
 }
