@@ -68,5 +68,12 @@ namespace EDDemo
             frmDobles.MdiParent = this;
             frmDobles.Show();
         }
+
+        private void circularesSimplesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmCircularesSimples frmCirculares = new frmCircularesSimples();
+            frmCirculares.MdiParent = this;
+            frmCirculares.Show();
+        }
     }
 }
