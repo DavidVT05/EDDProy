@@ -30,4 +30,17 @@ namespace EDDemo
         public NodosActuales ant;
 
     }
+    public class NodosDobles
+    {
+        public int Valor;
+        public NodosDobles sig;
+        public NodosDobles ant;
+        public NodosDobles(int valor)
+        {
+            Valor = valor;
+            sig = this;
+            ant = this;
+        }
+    }
+
 }
