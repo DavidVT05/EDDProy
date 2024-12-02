@@ -115,6 +115,42 @@
     <Compile Include="Graphviz.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Recursividad\frmBusquedaBinaria.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\frmBusquedaBinaria.Designer.cs">
+      <DependentUpon>frmBusquedaBinaria.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\frmCalculoExponente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\frmCalculoExponente.Designer.cs">
+      <DependentUpon>frmCalculoExponente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\frmFactorial.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\frmFactorial.Designer.cs">
+      <DependentUpon>frmFactorial.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\frmSecuenciaFibonacci.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\frmSecuenciaFibonacci.Designer.cs">
+      <DependentUpon>frmSecuenciaFibonacci.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\frmSumaElementosArreglo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\frmSumaElementosArreglo.Designer.cs">
+      <DependentUpon>frmSumaElementosArreglo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Recursividad\frmTorreHanoi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Recursividad\frmTorreHanoi.Designer.cs">
+      <DependentUpon>frmTorreHanoi.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Estructuras Lineales\frmCircularesDobles.resx">
       <DependentUpon>frmCircularesDobles.cs</DependentUpon>
     </EmbeddedResource>
@@ -151,6 +187,24 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Recursividad\frmBusquedaBinaria.resx">
+      <DependentUpon>frmBusquedaBinaria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\frmCalculoExponente.resx">
+      <DependentUpon>frmCalculoExponente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\frmFactorial.resx">
+      <DependentUpon>frmFactorial.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\frmSecuenciaFibonacci.resx">
+      <DependentUpon>frmSecuenciaFibonacci.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\frmSumaElementosArreglo.resx">
+      <DependentUpon>frmSumaElementosArreglo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Recursividad\frmTorreHanoi.resx">
+      <DependentUpon>frmTorreHanoi.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="external\external\.vs\acyclic\v17\.suo" />
     <None Include="external\external\.vs\external\FileContentIndex\c7d9e776-72c9-4e41-a433-e9a78e88aa52.vsidx" />
     <None Include="external\external\.vs\external\v17\.wsuo" />
@@ -277,5 +331,6 @@
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
