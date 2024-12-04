@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EDDemo.Recursividad.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,32 +27,13 @@ namespace EDDemo.Recursividad
                 MessageBox.Show("Ingresar un numero positivo.");
                 return;
             }
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            int operaciones = 0;
-            long resultado = Fibonacci(n, ref operaciones);
-            stopwatch.Stop();
+            Fibonacci fibonacci = new Fibonacci(); // se manda llamar la funcion para calcular la secuencia
+            int operaciones = 0; // se cuentan las operaciones realizadas
+            double tiempo; //se utliza para obtener el tiempo que dura la ejhecucion del programa
+            long resultado = fibonacci.SecFibonacci(n, ref operaciones, out tiempo);
             lblResultado.Text = $"{resultado}";
             lblOperaciones.Text = $"{operaciones}";
-            lblTiempo.Text = $"{stopwatch.Elapsed.TotalMilliseconds} ms";
-        }
-        private long Fibonacci(int n, ref int operaciones)
-        {
-            operaciones++;
-            if(n < 1)
-            {
-                return n;
-            }
-            long a = 0;
-            long b = 1;
-            for(int i = 2; i <= n; i++)
-            {
-                long temp = a + b;
-                a = b;
-                b = temp;
-                operaciones++;
-            }
-            return b;
+            lblTiempo.Text = $"{tiempo} ms";
         }
     }
 }

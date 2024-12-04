@@ -30,4 +30,16 @@ namespace EDDemo
         public NodosActuales ant;
 
     }
+    public class NodoResultado
+    {
+        public long Resultado { get; set; }
+        public int Operaciones { get; set; }
+        public double Tiempo { get; set; }
+        public NodoResultado(long resultado, int operaciones, double tiempo)
+        {
+            Resultado = resultado;
+            Operaciones = operaciones;
+            Tiempo = tiempo;
+        }
+    }
 }

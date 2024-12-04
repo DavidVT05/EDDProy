@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EDDemo.Recursividad.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -39,7 +40,7 @@ namespace EDDemo.Recursividad
             Stopwatch stopwatch = new Stopwatch();
             stopwatch.Start();
             int operaciones = 0;
-            int resultado = Busqueda(arreglo, valorB, 0, arreglo.Length - 1, ref operaciones);
+            int resultado = BusquedaBinaria.Busqueda(arreglo, valorB, 0, arreglo.Length - 1, ref operaciones);
             stopwatch.Stop();
             if(resultado != 1)
             {
@@ -51,24 +52,6 @@ namespace EDDemo.Recursividad
             }
             lblOperaciones.Text = $"{operaciones}";
             lblTiempo.Text = $"{stopwatch.Elapsed.TotalMilliseconds} ms";
-        }
-        static int Busqueda(int[] arreglo, int valor, int izquierda, int derecha, ref int operaciones)
-        {
-            operaciones++;
-            if(izquierda > derecha)
-            {
-                return -1;
-            }
-            int medio = izquierda + (derecha - izquierda) / 2;
-            if (arreglo[medio] == valor) //verificar que el valor este a la mitad
-            {
-                return medio;
-            }
-            if(valor < arreglo[medio])
-            {
-                return Busqueda(arreglo, valor, izquierda, medio - 1, ref operaciones);
-            }
-            return Busqueda(arreglo, valor, medio + 1, derecha, ref operaciones);
         }
     }
 }

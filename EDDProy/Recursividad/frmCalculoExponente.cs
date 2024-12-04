@@ -1,4 +1,5 @@
 ﻿using EDDemo.Estructuras_Lineales.Clases;
+using EDDemo.Recursividad.Clases;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -38,35 +39,12 @@ namespace EDDemo.Recursividad
                 MessageBox.Show("No se puede calcular la potencia con base 0 y exponente negativo.");
                 return;
             }
-            Stopwatch stopwatch = new Stopwatch(); // se mide el tiempo 
-            stopwatch.Start();
-            int operaciones = 0;
-            double resultado = Potencia(valor, exponente, ref operaciones);
-            stopwatch.Stop();
+            CalcularExponente exponentes = new CalcularExponente();
+            int Operaciones = 0;
+            double resultado = exponentes.Mediciones(valor, exponente, ref Operaciones);
             lblResultado.Text = $"{resultado} ";
-            lblOperaciones.Text = $"{operaciones} ";
-            lblTiempo.Text = $"{stopwatch.Elapsed.TotalMilliseconds} ms";
-        }
-        private double Potencia(double valor, int exponente, ref int operacion)
-        {
-            operacion++;
-            if(exponente < 0) // si el exponente es negativo
-            {
-                return 1 / Potencia(valor, -exponente, ref operacion);
-            }
-            if(exponente == 0)
-            {
-                return 1; // cuando un numero tiene de exponente cero su resultado es uno
-            }
-            if(exponente % 2 == 0) // cuand oel exponente es par
-            {
-                double elevado = Potencia(valor, exponente / 2, ref operacion);
-                    return elevado * elevado;
-            }
-            else // si el exponente es impar
-            {
-                return valor * Potencia(valor, exponente - 1, ref operacion);
-            }
+            lblOperaciones.Text = $"{Operaciones} ";
+            lblTiempo.Text = $"{exponentes.Tiempo} ms";
         }
     }
 }

@@ -23,28 +23,16 @@ namespace EDDemo.Recursividad
         {
             if(int.TryParse(txtValor.Text, out int n) && n > 0) // Se convierte a entero los numeros ingresados, si no lo son
             {
-                Stopwatch stopwatch = new Stopwatch(); //Se mide el tiempo de ejecucion 
-                stopwatch.Start();
-                int operaciones = 0;
-                long resultados = FactorialNumero(n, ref operaciones);
-                stopwatch.Stop();
-                lblResultado.Text = " " + resultados;
-                lblOperaciones.Text = " " + operaciones;
-                lblTiempo.Text = $"{stopwatch.Elapsed.TotalMilliseconds} ms";  
+                Factorial factorial = new Factorial();
+                var resultado = factorial.FactorialE(n);
+                lblResultado.Text = $"{resultado.Resultado}";
+                lblOperaciones.Text = $"{resultado.Operaciones}";
+                lblTiempo.Text = $"{resultado.Tiempo} ms";  
             }
             else
             {
                 MessageBox.Show("Ingresar un valor entero positivo.");
             }
-        }
-        private long FactorialNumero(int n, ref int operaciones)
-        {
-            operaciones++;
-            if(n <= 1)
-            {
-                return 1;
-            }
-            return n * FactorialNumero(n - 1, ref operaciones);
         }
     }
 }

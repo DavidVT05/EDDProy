@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EDDemo.Recursividad.Clases;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,35 +21,17 @@ namespace EDDemo.Recursividad
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            listMovimientos.Items.Clear(); // se limpian el listbox
-            lblOperaciones.Text = " ";
-            lblTiempo.Text = " ";
-            int n;
-            if(!int.TryParse(txtValor.Text, out n) || n < 1)
+            TorreHanoi torreHanoi = new TorreHanoi(); // se manda llamar la funcion de la torre de hanoi
+            string valor = txtValor.Text; //se guarda el valor ingresasdo
+            if(torreHanoi.Resolver(valor,listMovimientos,lblTiempo, lblOperaciones))
             {
-                MessageBox.Show("Se debe de ingresar un valor entero mayor a uno.");
-                return;
+                //Si no encuentra algun error se mostraran los resultados de la cantida de discos ingresado
             }
-            Stopwatch stopwatch = new Stopwatch();
-            stopwatch.Start();
-            int operaciones = 0;
-            Hanoi(n, 'A', 'B', 'C', ref operaciones); // se manda llamar al metodo recursivo
-            stopwatch.Stop();
-            //Se muestra el numero de operaciones que se relizan y el tiempo que tarda
-            lblOperaciones.Text = $"{operaciones}";
-            lblTiempo.Text = $"{stopwatch.Elapsed.TotalMilliseconds} ms";
-        }
-        private void Hanoi(int n, char inicio, char final, char aux, ref int operaciones)
-        {
-            operaciones++;
-            if(n == 1)
+            else
             {
-                listMovimientos.Items.Add($"Se recorre el primer disco desde {inicio} a {final}");
-                return;
+                MessageBox.Show("Ingresar un valor valido.");
             }
-            Hanoi(n - 1, inicio, aux, final, ref operaciones); // se realizan los primeros movimientos
-            listMovimientos.Items.Add($"Se recorre el disco {n} desde {inicio} a {final}"); // se realiza los movimientos que restan para llegar al final
-            Hanoi(n - 1, aux, final, inicio, ref operaciones); // Se mueven los discos restantes alta el final
         }
+        
     }
 }
