@@ -9,6 +9,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDemo.Estructuras_Lineales;
 using EDDemo.Estructuras_No_Lineales;
+using EDDemo.Metodos_de_ordenamiento.Externos;
+using EDDemo.Metodos_de_ordenamiento.Internos;
 using EDDemo.Recursividad;
 
 namespace EDDemo
@@ -124,6 +126,55 @@ namespace EDDemo
             frmTorreHanoi torreHanoi = new frmTorreHanoi();
             torreHanoi.MdiParent = this;
             torreHanoi.Show();
+        }
+
+        private void burbujaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmBurbuja burbuja = new frmBurbuja();
+            burbuja.MdiParent = this;
+            burbuja.Show();
+        }
+
+        private void quicksortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmQuicksort quicksort = new frmQuicksort();
+            quicksort.MdiParent = this;
+            quicksort.Show();
+        }
+
+        private void shellSortToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmShellSort shellSort = new frmShellSort();
+            shellSort.MdiParent = this;
+            shellSort.Show();
+        }
+
+        private void radixToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmRadix radix = new frmRadix();
+            radix.MdiParent = this;
+            radix.Show();
+        }
+
+        private void intercalacionToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmIntercalacion intercalacion = new frmIntercalacion();
+            intercalacion.MdiParent = this;
+            intercalacion.Show();
+        }
+
+        private void mezclaDirectaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMezclaDirecta mezclaDirecta = new frmMezclaDirecta();
+            mezclaDirecta.MdiParent = this;
+            mezclaDirecta.Show();
+        }
+
+        private void mezclaNaturalToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmMezclaNatural mezclaNatural = new frmMezclaNatural();
+            mezclaNatural.MdiParent = this;
+            mezclaNatural.Show();
         }
     }
 }

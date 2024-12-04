@@ -113,6 +113,55 @@
       <DependentUpon>frmPilas.cs</DependentUpon>
     </Compile>
     <Compile Include="Graphviz.cs" />
+    <Compile Include="Metodos de ordenamiento\Externos\CLases\Intercalacion.cs" />
+    <Compile Include="Metodos de ordenamiento\Externos\CLases\MezclaDirecta.cs" />
+    <Compile Include="Metodos de ordenamiento\Externos\CLases\MezclaNatural.cs" />
+    <Compile Include="Metodos de ordenamiento\Externos\frmIntercalacion.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Externos\frmIntercalacion.Designer.cs">
+      <DependentUpon>frmIntercalacion.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Externos\frmMezclaDirecta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Externos\frmMezclaDirecta.Designer.cs">
+      <DependentUpon>frmMezclaDirecta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Externos\frmMezclaNatural.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Externos\frmMezclaNatural.Designer.cs">
+      <DependentUpon>frmMezclaNatural.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Internos\Clases\Burbuja.cs" />
+    <Compile Include="Metodos de ordenamiento\Internos\Clases\Quicksort.cs" />
+    <Compile Include="Metodos de ordenamiento\Internos\Clases\Radix.cs" />
+    <Compile Include="Metodos de ordenamiento\Internos\Clases\ShellSort.cs" />
+    <Compile Include="Metodos de ordenamiento\Internos\frmBurbuja.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Internos\frmBurbuja.Designer.cs">
+      <DependentUpon>frmBurbuja.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Internos\frmQuicksort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Internos\frmQuicksort.Designer.cs">
+      <DependentUpon>frmQuicksort.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Internos\frmRadix.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Internos\frmRadix.Designer.cs">
+      <DependentUpon>frmRadix.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Internos\frmShellSort.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de ordenamiento\Internos\frmShellSort.Designer.cs">
+      <DependentUpon>frmShellSort.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Recursividad\Clases\BusquedaBinaria.cs" />
@@ -183,6 +232,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estructuras Lineales\frmPilas.resx">
       <DependentUpon>frmPilas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de ordenamiento\Internos\frmBurbuja.resx">
+      <DependentUpon>frmBurbuja.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
