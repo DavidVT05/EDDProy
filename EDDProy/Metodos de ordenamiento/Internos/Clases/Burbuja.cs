@@ -18,35 +18,24 @@ namespace EDDemo.Metodos_de_ordenamiento.Internos.Clases
         {
             int n = array.Length;
             bool ordenado;
-            for(int i = 0; i < n - 1; i++)
+            for(int i = 0; i < n - 1; i++)  //se realiza un  intercambio para cada elemento
             {
-                ordenado = true; // si el arreglo ya esta ordenado
-                if(OrdenarRecorido(array, i))
+                ordenado = false; //inicializamos un intercambio como falso
+                for (int j = 0; j < n - i - 1; j++) // se realiza el recorido del arreglo
                 {
-                    ordenado = false; // por si se realizo un intercambio ya ordenado
+                    if (array[j] > array[j + 1])
+                    {
+                        CambiarElementos(array, j); //se realiza la comparacion para saber si el numero actual es mayor que el que le sigue y se intercambian
+                        ordenado = true; //se realiza una marca para indiar que se realizo un intercambio
+                    }
                 }
-                if (ordenado)
+                Mostrar(array, i); // se muestra el recorrido despues de el intercambio
+                if (!ordenado) //Se realiza una comparacion para saber si se realizo un intercambio, si no el arreglo ya esta ordenado
                 {
-                    listCamino.Items.Add("El arreglo ya esta ordenado.");
-                    break;
-                }
-                
-            }
-        }
-        //Metodo que maneja una pasada del algoritmo burbuja
-        private bool OrdenarRecorido(int[] array, int recorrido) 
-        {
-            bool intercambio = false;
-            for(int j =0; j< array.Length - recorrido - 1; j++) //se realiza el recorido del arreglo para realizar lor intercambios necesarios
-            {
-                if (array[j] > array[j + 1])
-                {
-                    CambiarElementos(array, j);
-                    intercambio = true;
+                    listCamino.Items.Add("El arreglo ya fue ordenado.");
+                    break; //se indica una salida del ciclo 
                 }
             }
-            Mostrar(array, recorrido); //Se muestra el estad despues de la pasada
-            return !intercambio; //Retornamos si se realiza o no se realiza un intercambio en esta pasada
         }
         private void CambiarElementos(int[] array, int indice) //se intercambian los elementos en las posiciones indicadas
         {
