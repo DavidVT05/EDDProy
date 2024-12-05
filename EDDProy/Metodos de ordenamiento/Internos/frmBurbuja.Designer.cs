@@ -37,14 +37,14 @@
             // listOrdenar
             // 
             this.listOrdenar.FormattingEnabled = true;
-            this.listOrdenar.Location = new System.Drawing.Point(27, 212);
+            this.listOrdenar.Location = new System.Drawing.Point(26, 63);
             this.listOrdenar.Name = "listOrdenar";
-            this.listOrdenar.Size = new System.Drawing.Size(423, 147);
+            this.listOrdenar.Size = new System.Drawing.Size(423, 277);
             this.listOrdenar.TabIndex = 0;
             // 
             // btnOrdenar
             // 
-            this.btnOrdenar.Location = new System.Drawing.Point(70, 93);
+            this.btnOrdenar.Location = new System.Drawing.Point(352, 13);
             this.btnOrdenar.Name = "btnOrdenar";
             this.btnOrdenar.Size = new System.Drawing.Size(97, 25);
             this.btnOrdenar.TabIndex = 1;
@@ -54,7 +54,7 @@
             // 
             // txtValor
             // 
-            this.txtValor.Location = new System.Drawing.Point(51, 65);
+            this.txtValor.Location = new System.Drawing.Point(111, 16);
             this.txtValor.Name = "txtValor";
             this.txtValor.Size = new System.Drawing.Size(208, 20);
             this.txtValor.TabIndex = 2;
@@ -62,7 +62,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(48, 39);
+            this.label1.Location = new System.Drawing.Point(23, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(82, 13);
             this.label1.TabIndex = 3;
@@ -72,7 +72,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(482, 450);
+            this.ClientSize = new System.Drawing.Size(482, 365);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtValor);
             this.Controls.Add(this.btnOrdenar);
