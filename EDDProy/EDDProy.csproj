@@ -239,6 +239,9 @@
     <EmbeddedResource Include="Metodos de ordenamiento\Internos\frmQuicksort.resx">
       <DependentUpon>frmQuicksort.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de ordenamiento\Internos\frmRadix.resx">
+      <DependentUpon>frmRadix.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Metodos de ordenamiento\Internos\frmShellSort.resx">
       <DependentUpon>frmShellSort.cs</DependentUpon>
     </EmbeddedResource>
