@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using EDDemo.Estructuras_Lineales;
 using EDDemo.Estructuras_No_Lineales;
+using EDDemo.Metodos_de_busqueda;
 using EDDemo.Metodos_de_ordenamiento.Externos;
 using EDDemo.Metodos_de_ordenamiento.Internos;
 using EDDemo.Recursividad;
@@ -175,6 +176,13 @@ namespace EDDemo
             frmMezclaNatural mezclaNatural = new frmMezclaNatural();
             mezclaNatural.MdiParent = this;
             mezclaNatural.Show();
+        }
+
+        private void busquedaBinariaToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmBusquedaBinariaa binariaa = new frmBusquedaBinariaa();
+            binariaa.MdiParent = this;
+            binariaa.Show();
         }
     }
 }

@@ -113,6 +113,13 @@
       <DependentUpon>frmPilas.cs</DependentUpon>
     </Compile>
     <Compile Include="Graphviz.cs" />
+    <Compile Include="Metodos de busqueda\Clases\BusquedaBinariaas.cs" />
+    <Compile Include="Metodos de busqueda\frmBusquedaBinariaa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Metodos de busqueda\frmBusquedaBinariaa.Designer.cs">
+      <DependentUpon>frmBusquedaBinariaa.cs</DependentUpon>
+    </Compile>
     <Compile Include="Metodos de ordenamiento\Externos\CLases\Intercalacion.cs" />
     <Compile Include="Metodos de ordenamiento\Externos\CLases\MezclaDirecta.cs" />
     <Compile Include="Metodos de ordenamiento\Externos\CLases\MezclaNatural.cs" />
@@ -232,6 +239,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Estructuras Lineales\frmPilas.resx">
       <DependentUpon>frmPilas.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de busqueda\frmBusquedaBinariaa.resx">
+      <DependentUpon>frmBusquedaBinariaa.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Metodos de ordenamiento\Internos\frmBurbuja.resx">
       <DependentUpon>frmBurbuja.cs</DependentUpon>
