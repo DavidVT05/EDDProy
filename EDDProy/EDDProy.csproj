@@ -289,8 +289,12 @@
     <None Include="external\external\.vs\ProjectSettings.json" />
     <None Include="external\external\.vs\slnx.sqlite" />
     <None Include="external\external\.vs\VSWorkspaceState.json" />
-    <None Include="external\external\config6" />
-    <None Include="external\external\gvmap.sh" />
+    <None Include="external\external\config6">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="external\external\gvmap.sh">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
     <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -306,104 +310,300 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="external\external\acyclic.exe" />
-    <Content Include="external\external\ANN.dll" />
-    <Content Include="external\external\bcomps.exe" />
-    <Content Include="external\external\brotlicommon.dll" />
-    <Content Include="external\external\brotlidec.dll" />
-    <Content Include="external\external\bz2.dll" />
-    <Content Include="external\external\cairo-2.dll" />
-    <Content Include="external\external\ccomps.exe" />
-    <Content Include="external\external\cdt.dll" />
-    <Content Include="external\external\cgraph++.dll" />
-    <Content Include="external\external\cgraph.dll" />
-    <Content Include="external\external\circo.exe" />
-    <Content Include="external\external\cluster.exe" />
-    <Content Include="external\external\concrt140.dll" />
-    <Content Include="external\external\diffimg.exe" />
-    <Content Include="external\external\dijkstra.exe" />
-    <Content Include="external\external\dot.exe" />
-    <Content Include="external\external\dot2gxl.exe" />
-    <Content Include="external\external\dot_builtins.exe" />
-    <Content Include="external\external\edgepaint.exe" />
-    <Content Include="external\external\fdp.exe" />
-    <Content Include="external\external\ffi-8.dll" />
-    <Content Include="external\external\fontconfig-1.dll" />
-    <Content Include="external\external\freetype.dll" />
-    <Content Include="external\external\fribidi-0.dll" />
-    <Content Include="external\external\gc.exe" />
-    <Content Include="external\external\gdtclft.dll" />
-    <Content Include="external\external\getopt.dll" />
-    <Content Include="external\external\gio-2.0-0.dll" />
-    <Content Include="external\external\glib-2.0-0.dll" />
-    <Content Include="external\external\gml2gv.exe" />
-    <Content Include="external\external\gmodule-2.0-0.dll" />
-    <Content Include="external\external\gobject-2.0-0.dll" />
-    <Content Include="external\external\graphml2gv.exe" />
-    <Content Include="external\external\gts.dll" />
-    <Content Include="external\external\gv2gml.exe" />
-    <Content Include="external\external\gv2gxl.exe" />
-    <Content Include="external\external\gvc++.dll" />
-    <Content Include="external\external\gvc.dll" />
-    <Content Include="external\external\gvcolor.exe" />
-    <Content Include="external\external\gvgen.exe" />
-    <Content Include="external\external\gvmap.exe" />
-    <Content Include="external\external\gvpack.exe" />
-    <Content Include="external\external\gvplugin_core.dll" />
-    <Content Include="external\external\gvplugin_dot_layout.dll" />
-    <Content Include="external\external\gvplugin_gd.dll" />
-    <Content Include="external\external\gvplugin_gdiplus.dll" />
-    <Content Include="external\external\gvplugin_kitty.dll" />
-    <Content Include="external\external\gvplugin_neato_layout.dll" />
-    <Content Include="external\external\gvplugin_pango.dll" />
-    <Content Include="external\external\gvplugin_vt.dll" />
-    <Content Include="external\external\gvplugin_webp.dll" />
-    <Content Include="external\external\gvpr.exe" />
-    <Content Include="external\external\gxl2dot.exe" />
-    <Content Include="external\external\gxl2gv.exe" />
-    <Content Include="external\external\harfbuzz.dll" />
-    <Content Include="external\external\iconv-2.dll" />
-    <Content Include="external\external\intl-8.dll" />
-    <Content Include="external\external\jpeg62.dll" />
-    <Content Include="external\external\libexpat.dll" />
-    <Content Include="external\external\libgd.dll" />
-    <Content Include="external\external\liblzma.dll" />
-    <Content Include="external\external\libpng16.dll" />
-    <Content Include="external\external\libsharpyuv.dll" />
-    <Content Include="external\external\libwebp.dll" />
-    <Content Include="external\external\mingle.exe" />
-    <Content Include="external\external\mm2gv.exe" />
-    <Content Include="external\external\msvcp140.dll" />
-    <Content Include="external\external\msvcp140_1.dll" />
-    <Content Include="external\external\msvcp140_2.dll" />
-    <Content Include="external\external\msvcp140_atomic_wait.dll" />
-    <Content Include="external\external\msvcp140_codecvt_ids.dll" />
-    <Content Include="external\external\neato.exe" />
-    <Content Include="external\external\nop.exe" />
-    <Content Include="external\external\osage.exe" />
-    <Content Include="external\external\pango-1.0-0.dll" />
-    <Content Include="external\external\pangocairo-1.0-0.dll" />
-    <Content Include="external\external\pangoft2-1.0-0.dll" />
-    <Content Include="external\external\pangowin32-1.0-0.dll" />
-    <Content Include="external\external\patchwork.exe" />
-    <Content Include="external\external\pathplan.dll" />
-    <Content Include="external\external\pcre2-8.dll" />
-    <Content Include="external\external\pixman-1-0.dll" />
-    <Content Include="external\external\prune.exe" />
-    <Content Include="external\external\sccmap.exe" />
-    <Content Include="external\external\sfdp.exe" />
-    <Content Include="external\external\tcl86t.dll" />
-    <Content Include="external\external\tcldot.dll" />
-    <Content Include="external\external\tcldot_builtin.dll" />
-    <Content Include="external\external\tclplan.dll" />
-    <Content Include="external\external\tiff.dll" />
-    <Content Include="external\external\tred.exe" />
-    <Content Include="external\external\twopi.exe" />
-    <Content Include="external\external\unflatten.exe" />
-    <Content Include="external\external\vcruntime140.dll" />
-    <Content Include="external\external\vcruntime140_1.dll" />
-    <Content Include="external\external\xdot.dll" />
-    <Content Include="external\external\zlib1.dll" />
+    <Content Include="external\external\acyclic.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\ANN.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\bcomps.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\brotlicommon.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\brotlidec.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\bz2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\cairo-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\ccomps.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\cdt.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\cgraph++.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\cgraph.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\circo.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\cluster.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\concrt140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\diffimg.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\dijkstra.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\dot.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\dot2gxl.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\dot_builtins.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\edgepaint.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\fdp.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\ffi-8.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\fontconfig-1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\freetype.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\fribidi-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gc.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gdtclft.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\getopt.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gio-2.0-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\glib-2.0-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gml2gv.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gmodule-2.0-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gobject-2.0-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\graphml2gv.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gts.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gv2gml.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gv2gxl.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvc++.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvc.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvcolor.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvgen.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvmap.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvpack.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_core.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_dot_layout.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_gd.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_gdiplus.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_kitty.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_neato_layout.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_pango.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_vt.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvplugin_webp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gvpr.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gxl2dot.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\gxl2gv.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\harfbuzz.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\iconv-2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\intl-8.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\jpeg62.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\libexpat.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\libgd.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\liblzma.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\libpng16.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\libsharpyuv.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\libwebp.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\mingle.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\mm2gv.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\msvcp140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\msvcp140_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\msvcp140_2.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\msvcp140_atomic_wait.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\msvcp140_codecvt_ids.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\neato.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\nop.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\osage.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\pango-1.0-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\pangocairo-1.0-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\pangoft2-1.0-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\pangowin32-1.0-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\patchwork.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\pathplan.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\pcre2-8.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\pixman-1-0.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\prune.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\sccmap.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\sfdp.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\tcl86t.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\tcldot.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\tcldot_builtin.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\tclplan.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\tiff.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\tred.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\twopi.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\unflatten.exe">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\vcruntime140.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\vcruntime140_1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\xdot.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="external\external\zlib1.dll">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Connected Services\" />
