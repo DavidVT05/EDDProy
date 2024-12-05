@@ -239,6 +239,9 @@
     <EmbeddedResource Include="Metodos de ordenamiento\Internos\frmQuicksort.resx">
       <DependentUpon>frmQuicksort.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Metodos de ordenamiento\Internos\frmShellSort.resx">
+      <DependentUpon>frmShellSort.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
